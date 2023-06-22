@@ -7,7 +7,7 @@ const MockRepository = () => {
   };
 };
 
-describe("Add product usecase unit test", () => {
+describe("Add Product usecase unit test", () => {
   it("should add a product", async () => {
     const productRepository = MockRepository();
     const usecase = new AddProduct(productRepository);
@@ -17,7 +17,7 @@ describe("Add product usecase unit test", () => {
       description: "Product 1 description",
       purchasePrice: 100,
       stock: 10,
-    }
+    };
     const result = await usecase.execute(input);
 
     expect(productRepository.add).toHaveBeenCalled();
