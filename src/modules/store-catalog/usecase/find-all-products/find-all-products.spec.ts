@@ -40,6 +40,5 @@ describe("Find all products usecase unit test", () => {
     expect(result.products[1].name).toBe("Product 2");
     expect(result.products[1].description).toBe("Product description 2");
     expect(result.products[1].salesPrice).toBe(200);
-
   });
 });
