@@ -8,6 +8,7 @@ export class AddClient {
 
   async execute(input: AddClientInputDto): Promise<AddClientOutputDto> {
     const client = new Client({
+      id: new Id(input.id) || new Id(),
       name: input.name,
       email: input.email,
       address: input.address
